@@ -28,22 +28,6 @@ iex(6)> GprocExample.Progress.fetch_progress(progress)
 ```
 
 ### Tools
-- [Event]() - create events in the database, cast an event via gproc to progress projection/reducer
-- [Progress]() - takes events and returns the current state based on the queue of them
+- [Event](https://github.com/gogogarrett/gproc_example/blob/master/lib%2Fgproc_example%2Fevent.ex) - create events in the database, cast an event via gproc to progress projection/reducer
+- [Progress](https://github.com/gogogarrett/gproc_example/blob/master/lib%2Fgproc_example%2Fprogress.ex) - takes events and returns the current state based on the queue of them
   - idea: if this crashes, load from the DB all of the events - and re-run through them all again?
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add gproc_example to your list of dependencies in `mix.exs`:
-
-        def deps do
-          [{:gproc_example, "~> 0.0.1"}]
-        end
-
-  2. Ensure gproc_example is started before your application:
-
-        def application do
-          [applications: [:gproc_example]]
-        end
