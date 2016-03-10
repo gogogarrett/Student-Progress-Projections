@@ -35,6 +35,12 @@ defmodule GprocExample.Progress do
 
   alias GprocExample.Progress.{Student, PrecinctState, Lesson}
 
+  # client api
+  def fetch_progress(pid) do
+    GenServer.call(pid, :fetch_progress)
+  end
+
+  # genserver api
   def start_link do
     GenServer.start_link(__MODULE__, Student.new, [])
   end

@@ -1,20 +1,28 @@
 defmodule GprocExample.Event do
+  use GenServer
   require Logger
-  
+
   alias __MODULE__
 
+  # stub for schema/model
   defstruct student_id: nil, activity: nil
-
   def changeset(_, event) do
     event
   end
 
+  # stub for ecto
   defmodule Repo do
     def insert(event) do
       {:ok, event}
     end
   end
 
+  # client api
+  def complete_activity(pid, event) do
+    GenServer.cast(pid, {:complete_activity, event})
+  end
+
+  # genserver api
   def start_link do
     GenServer.start_link(__MODULE__, :ok, [])
   end
