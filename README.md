@@ -16,11 +16,9 @@ iex(2)> {:ok, event} = GprocExample.Event.start_link
 iex(3)> GprocExample.Event.complete_activity(event, %{student_id: 1, activity: 1, lesson: 1})
 :ok
 iex(4)> GprocExample.Progress.fetch_progress(progress)
-Complete Acticity: 1
 %GprocExample.Progress.PrecinctState{current_activity: 2, current_map: 1,
  current_position: 1}
 iex(5)> GprocExample.Event.complete_activity(event, %{student_id: 1, activity: 11, lesson: 1})
-Complete Acticity: 11
 :ok
 iex(6)> GprocExample.Progress.fetch_progress(progress)
 %GprocExample.Progress.PrecinctState{current_activity: 1, current_map: 1,
