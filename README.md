@@ -8,7 +8,7 @@ A simple Event GenServer to create events in the database, as well as notify the
 
 ### Usage
 
-```
+```elixir
 iex(1)> {:ok, progress} = GprocExample.Progress.start_link
 {:ok, #PID<0.160.0>}
 iex(2)> {:ok, event} = GprocExample.Event.start_link
