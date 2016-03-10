@@ -1,6 +1,6 @@
 # GprocExample
 
-A simple spike to see to play with [gproc](https://github.com/uwiger/gproc).
+A simple spike to play with [gproc](https://github.com/uwiger/gproc).
 
 ### Idea
 

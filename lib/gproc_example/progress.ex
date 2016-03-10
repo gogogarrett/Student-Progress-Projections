@@ -1,12 +1,14 @@
 defmodule GprocExample.Progress do
   use GenServer
 
+  # stub for lesson construct
   defmodule Lesson do
     def activity_count(lesson_id, locale) do
       2
     end
   end
 
+  # stub for a Student model/struct
   defmodule Student do
     defstruct id: nil, name: "Sample"
 
@@ -21,6 +23,7 @@ defmodule GprocExample.Progress do
     end
   end
 
+  # stub for a progress state struct (we could have one per precinct/section of the site)
   defmodule PrecinctState do
     defstruct current_map: nil, current_position: nil, current_activity: nil
 
